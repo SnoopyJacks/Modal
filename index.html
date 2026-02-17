@@ -35,5 +35,38 @@
       </div>
     </div>
     <!-------------Delete Confirm Modal---------------->
+    <div class="backdrop" id="deleteModal">
+      <a class="backdropClose" href="#" aria-label="Close modal"></a>
+
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="deleteTitle"
+      >
+        <div class="modalHead">
+          <h2 class="modalTitle" id="deleteTitle">Delete video?</h2>
+          <a class="btn ghost" href="#">Close</a>
+        </div>
+
+        <div class="modalBody">
+          <div class="warning">
+            This action cannot be undone. This will remove the row permanently.
+          </div>
+
+          <div class="hint">
+            Use this pattern for destructive actions to prevent accidental
+            clicks. Always provide a clear way to cancel the action, and
+            consider adding an extra confirmation step for very destructive
+            actions.
+          </div>
+        </div>
+
+        <div class="modalFoot">
+          <a class="btn" href="#">Cancel</a>
+          <a class="btn danger" href="#">Delete</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
