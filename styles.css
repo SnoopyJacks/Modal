@@ -106,3 +106,135 @@ h1 {
 }
 
 /* ===== Modal system (CSS-only with :target) ===== */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 24, 40, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Show the backdrop when the target is active */
+.backdrop:target {
+  display: flex;
+}
+
+.modal {
+  width: 640px;
+  max-width: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+}
+
+.modalHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 1000;
+  letter-spacing: -0.1px;
+}
+
+.modalBody {
+  padding: 14px 16px;
+}
+
+.modalFoot {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 14px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.hint {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.warning {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  background: var(--danger-weak);
+  color: #991b1b;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.field {
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Make clicking backdrop close (CSS-only): add a big close link behind modal */
+.backdropClose {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.modal {
+  position: relative;
+  z-index: 1;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+
+  code {
+    background: #f2f4f7;
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+}
