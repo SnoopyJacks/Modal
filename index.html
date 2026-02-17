@@ -68,5 +68,85 @@
         </div>
       </div>
     </div>
+
+    <!-------------Edit Form Modal---------------->
+    <div class="backdrop" id="editModal">
+      <a class="backdropClose" href="#" aria-label="Close modal"></a>
+
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="editTitle"
+      >
+        <div class="modalHead">
+          <h2 class="modalTitle" id="editTitle">Edit video row</h2>
+          <a class="btn ghost" href="#">Close</a>
+        </div>
+
+        <div class="modalBody">
+          <div class="twoCol">
+            <div class="field">
+              <label for="title">Final Title</label>
+              <input id="title" type="text" placeholder="Code / Hook / Myth" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="notes">Optimization Notes</label>
+            <textarea
+              id="notes"
+              placeholder="What will you improve next time?"
+            ></textarea>
+          </div>
+
+          <div class="hint">
+            Use this for "Add/Edit" workflows so users do not leave the table
+            page
+          </div>
+        </div>
+
+        <div class="modalFoot">
+          <a class="btn" href="#">Cancel</a>
+          <a class="btn primary" href="#">Save</a>
+        </div>
+      </div>
+    </div>
+    <!-------------Login Modal---------------->
+    <div class="backdrop" id="loginModal">
+      <a class="backdropClose" href="#" aria-label="Close modal"></a>
+
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="loginTitle"
+      >
+        <div class="modalHead">
+          <h2 class="modalTitle" id="loginTitle">Log in</h2>
+          <a class="btn ghost" href="#">Close</a>
+        </div>
+
+        <div class="modalBody">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" />
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter your password" />
+          </div>
+
+          <div class="hint">
+           Login can be modal (overlay) or a full page. Modal is good when you want users to keep context. 
+          </div>
+
+          <div class="modalFoot">
+            <a class="btn" href="#">Cancel</a>
+            <a class="btn primary" href="#">Log in</a>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
