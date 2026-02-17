@@ -114,11 +114,20 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  z-index: 1000;
 }
 
 /* Show the backdrop when the target is active */
 .backdrop:target {
   display: flex;
+}
+
+/* Make clicking backdrop close (CSS-only): add a big close link behind modal */
+.backdropClose {
+  position: fixed;
+  inset: 0;
+  display: block;
+  z-index: 0;
 }
 
 .modal {
@@ -129,6 +138,8 @@ h1 {
   border-radius: var(--r);
   box-shadow: var(--shadow-2);
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .modalHead {
@@ -208,33 +219,22 @@ textarea {
   resize: vertical;
 }
 
-/* Make clicking backdrop close (CSS-only): add a big close link behind modal */
-.backdropClose {
-  position: absolute;
-  inset: 0;
-  display: block;
-}
-.modal {
-  position: relative;
-  z-index: 1;
-}
-
 .twoCol {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
+code {
+  background: #f2f4f7;
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
 @media (max-width: 640px) {
   .twoCol {
     grid-template-columns: 1fr;
-  }
-
-  code {
-    background: #f2f4f7;
-    border: 1px solid var(--border);
-    padding: 2px 6px;
-    border-radius: 8px;
-    font-size: 12px;
   }
 }
