@@ -6,5 +6,34 @@
     <title>Modal Examples CSS Only</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <!-------------Header---------------->
+    <div class="wrap">
+      <div class="card">
+        <h1>3 Modal Examples <span class="pill">CSS-Only</span></h1>
+        <p class="sub">
+          These are common dashboard patterns: <b>Delete confirm</b>,
+          <b>Edit form</b>, and <b>Login</b>. They are built with only HTML and
+          CSS, no JavaScript using <code>:target</code>.
+        </p>
+
+        <div class="row">
+          <a class="btn danger" href="#deleteModal">Open Delete Confirm</a>
+          <a class="btn primary" href="#editModal">Open Edit Form</a>
+          <a class="btn" href="#loginModal">Open Login</a>
+        </div>
+        <p class="hint">
+          Recruiter note: This is a demo of how to create modals using only HTML
+          and CSS. The modals are triggered using the :target pseudo-class,
+          which allows us to show and hide the modal content without any
+          JavaScript. Each button opens a different modal, and you can close the
+          modal by clicking outside of it or using the close button inside the
+          modal. A production modal would add JS for Escape and focus
+          management, but this is a learning demo of how to do it with just HTML
+          and CSS.
+        </p>
+      </div>
+    </div>
+    <!-------------Delete Confirm Modal---------------->
+  </body>
 </html>
